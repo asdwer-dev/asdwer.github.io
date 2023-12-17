@@ -6,13 +6,24 @@
     <title>Прикольный сайт</title>
     <style>
         body {
-            background-image: url('путь_к_твоему_прикольному_фону.jpg'); /* замени путь_к_твоему_прикольному_фону.jpg на реальный путь к изображению */
-            background-size: cover;
-            background-position: center;
-            color: #fff; /* цвет текста */
+            background: linear-gradient(45deg, #3498db, #2ecc71); /* замени цвета на свои */
+            color: #fff;
             font-family: 'Arial', sans-serif;
             text-align: center;
             padding: 50px;
+            animation: changeBackground 10s infinite alternate; /* анимация фона */
+        }
+
+        @keyframes changeBackground {
+            0% {
+                background: linear-gradient(45deg, #3498db, #2ecc71);
+            }
+            50% {
+                background: linear-gradient(45deg, #2ecc71, #3498db);
+            }
+            100% {
+                background: linear-gradient(45deg, #3498db, #2ecc71);
+            }
         }
 
         h1 {
