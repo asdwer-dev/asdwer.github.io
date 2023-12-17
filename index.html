@@ -4,65 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Прикольный сайт</title>
-    <style>
-        body {
-            background: linear-gradient(45deg, #3498db, #2ecc71); /* замени цвета на свои */
-            color: #fff;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            padding: 50px;
-            animation: changeBackground 10s infinite alternate; /* анимация фона */
-        }
-
-        @keyframes changeBackground {
-            0% {
-                background: linear-gradient(45deg, #3498db, #2ecc71);
-            }
-            50% {
-                background: linear-gradient(45deg, #2ecc71, #3498db);
-            }
-            100% {
-                background: linear-gradient(45deg, #3498db, #2ecc71);
-            }
-        }
-
-        h1 {
-            font-size: 36px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .social-buttons {
-            margin-top: 20px;
-        }
-
-        .social-buttons a {
-            display: inline-block;
-            margin: 0 10px;
-            text-decoration: none;
-            color: #fff;
-            background-color: #3498db; /* цвет фона кнопок - замени на нужный */
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .social-buttons a:hover {
-            background-color: #2980b9; /* цвет фона кнопок при наведении */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Добро пожаловать на мой прикольный сайт!</h1>
-    <p>Здесь будет какая-то интересная информация о моем сайте. Может быть, расскажу о том, что меня вдохновляет или как я провожу свое время.</p>
+    <div class="content">
+        <h1>Добро пожаловать на мой прикольный сайт!</h1>
+        <p>Здесь будет какая-то интересная информация о моем сайте. Может быть, расскажу о том, что меня вдохновляет или как я провожу свое время.</p>
 
-    <div class="social-buttons">
-        <a href="ссылка_на_твой_профиль_в_соцсети" target="_blank">Facebook</a>
-        <a href="ссылка_на_твой_профиль_в_соцсети" target="_blank">Twitter</a>
-        <a href="ссылка_на_твой_профиль_в_соцсети" target="_blank">Instagram</a>
+        <div class="social-buttons">
+            <a href="ссылка_на_твой_профиль_в_facebook" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="ссылка_на_твой_профиль_в_twitter" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="ссылка_на_твой_профиль_в_instagram" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
