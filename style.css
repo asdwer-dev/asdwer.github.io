@@ -1,4 +1,5 @@
 /*style.css*/
+
 body, html {
   margin: 0;
   padding: 0;
@@ -16,12 +17,20 @@ body, html {
 }
 
 .glass-box {
-  background: rgba(0, 0, 0, 0.500);/*rgba(43, 255, 0, 0.11);*/
+  background: rgba(0, 0, 0, 0.500);
   border: 2px solid rgba(43, 255, 0, 0.137);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   color: white;
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid;
+  animation: border-anim 1.0s infinite alternate;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
 }
 
 .social-buttons {
@@ -31,18 +40,17 @@ body, html {
 .transparent-button {
   display: inline-block;
   padding: 10px 20px;
-  margin: 0 10px;
+  margin: 0 5px;
   color: white;
   border: 2px solid white;
   border-radius: 5px;
   text-decoration: none;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s,;
   font-weight: normal;
 }
 
 .transparent-button:hover {
   background: rgba(43, 255, 0, 0.445);
-  color: black;
 }
 
 .glass-box h1,
@@ -129,24 +137,20 @@ body, html {
   align-items: center;
 }
 
-.glass-box {
-  position: relative;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.5);
-  border: 2px solid rgba(43, 255, 0, 0.137);
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  color: white;
-  margin-bottom: 20px;
+@keyframes border-anim {
+  from {
+    border-color: rgba(0, 255, 0, 0.9);
+  }
+  to {
+    border-color: rgba(0, 255, 0, 0.1);
+  }
 }
 
 .projects {
   display: flex;
-  flex-wrap: wrap; /* Добавлено свойство flex-wrap */
+  flex-wrap: wrap;
   justify-content: space-around;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);  
   border-radius: 10px;
   text-align: center;
   color: white;
@@ -154,14 +158,54 @@ body, html {
 
 .project {
   text-align: center;
+  width: 250px;
   max-width: 300px;
-  margin-bottom: 20px;
-  margin-right: 20px;
+  margin: 5px;
   padding: 10px;
   border: 2px solid rgba(43, 255, 0, 0.137);
   border-radius: 10px;
   text-decoration: none;
   color: white;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-info-project {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(43, 255, 0, 0.137);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  margin-top: 50px;
+  position: relative; /* Добавлен этот стиль для корректного позиционирования крестика */
+}
+
+.close-button {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+  }
+
+.close-button:hover {
+  color: #00ff00;
+}
+
+.project:hover {
+  background: rgba(43, 255, 0, 0.05);
 }
 
 .project img {
